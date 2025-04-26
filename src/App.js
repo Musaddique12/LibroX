@@ -39,7 +39,7 @@ const router = createBrowserRouter([
   {path:'/login',element:<Auth/>},
 
   {path:'/ceo',element:<CeoDashborad/>,children:[
-    {path:'',element:<AddEventBooks/>},
+    {path:'',element:<EventInfo/>},
     {path:'addevent',element:<AddEventBooks/>},
     {path:'eventinfo',element:<EventInfo/>},
     {path:'updateEvent',element:<UpdateEvent/>},
