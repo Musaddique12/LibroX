@@ -1,0 +1,112 @@
+/* Container */
+.adlaunch-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #1e1e2f;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.adlaunch-container.fade-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Title */
+.adlaunch-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffcc00;
+    animation: slide-down 0.6s ease-out;
+}
+
+/* Form */
+.adlaunch-form {
+    margin-top: 20px;
+    animation: fade-slide 0.6s ease-out;
+}
+
+.adlaunch-input {
+    width: 90%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: 0.3s;
+}
+
+.adlaunch-input:focus {
+    outline: none;
+    border: 2px solid #ffcc00;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Radio Button Labels */
+.adlaunch-type label,
+.adlaunch-duration label {
+    display: block;
+    margin: 8px 0;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.adlaunch-type label:hover,
+.adlaunch-duration label:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Button */
+.adlaunch-button {
+    margin-top: 20px;
+    background: linear-gradient(45deg, #ff007f, #ffcc00);
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.adlaunch-button:hover {
+    box-shadow: 0px 0px 20px rgba(255, 204, 0, 0.8);
+    transform: scale(1.05);
+}
+
+.adlaunch-button:active {
+    transform: scale(0.95);
+}
+
+/* Animations */
+@keyframes slide-down {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-slide {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

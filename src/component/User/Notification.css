@@ -1,0 +1,152 @@
+/* Notification component styles */
+.notification-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notification-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .notification-filter-options {
+    margin-bottom: 20px;
+  }
+  
+  .notification-filter-options button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .notification-filter-options .notification-filter-active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+  }
+  
+  /* Mark All as Read button */
+  .notification-mark-all, .notification-delete-all {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .notification-mark-all:hover {
+    background-color: #d64040;
+  }
+  
+  .notification-delete-all {
+    background-color: #d9534f;
+  }
+  
+  .notification-delete-all:hover {
+    background-color: #b52b27;
+  }
+  
+  /* Notification list */
+  .notification-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .notification-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+  }
+  
+  .notification-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .notification-read {
+    background-color: #e0e0e0;
+  }
+  
+  .notification-unread {
+    background-color: #fff3e0;
+  }
+  
+  .notification-content {
+    flex-grow: 1;
+    cursor: pointer;
+  }
+  
+  .notification-message {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .notification-timestamp {
+    font-size: 0.85rem;
+    color: #888;
+  }
+  
+  /* Delete button */
+  .notification-delete {
+    background: none;
+    border: none;
+    color: #d9534f;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .notification-delete:hover {
+    color: #b52b27;
+  }
+  
+  .notification-no-data {
+    font-size: 1rem;
+    color: #888;
+    font-style: italic;
+  }
+  .notification-button-container{
+    display:flex;
+    gap:40px;
+  }
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .notification-container {
+      padding: 15px;
+    }
+  
+    .notification-title {
+      font-size: 1.5rem;
+    }
+  
+    .notification-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .notification-delete {
+      align-self: flex-end;
+    }
+     .notification-button-container{
+    display:flex;
+    gap:10px;
+  }
+  
+  }
+ 

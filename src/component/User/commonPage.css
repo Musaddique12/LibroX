@@ -1,0 +1,260 @@
+/* Reset and Base Styles */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+} */
+ 
+
+/* Container */
+.commonpage-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.commonpage-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #262626;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.commonpage-logo {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.commonpage-nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.commonpage-nav-link {
+  color: #ddd;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.commonpage-nav-link:hover {
+  color: #00ccff;
+  transform: scale(1.05);
+}
+
+.commonpage-auth-btn {
+  background-color: #00ccff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  color: #fff;
+}
+
+.commonpage-signup-btn {
+  background-color: #ff4081;
+}
+
+.commonpage-auth-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* Section Base */
+.commonpage-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.commonpage-section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.commonpage-section-description {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* About Section */
+.commonpage-about-section {
+  background: linear-gradient(to right, #e3ffe7, #d9e7ff);
+  border-radius: 8px;
+}
+
+/* Books Section */
+.commonpage-books-section {
+  background-color: #fff;
+}
+
+.commonpage-book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.commonpage-book-card {
+  background: #f0f0f0;
+  border-radius: 12px;
+  width: 250px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.commonpage-book-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.commonpage-book-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.commonpage-book-title {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.commonpage-book-author {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.commonpage-book-rating {
+  font-size: 1rem;
+  color: #ffaa00;
+}
+
+/* Testimonials */
+.commonpage-testimonials-section {
+  background-color: #f6f6f6;
+}
+
+.commonpage-testimonial-card {
+  background: #fff;
+  margin: 1rem auto;
+  max-width: 600px;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+  transition: transform 0.3s ease;
+}
+
+.commonpage-testimonial-card:hover {
+  transform: translateY(-4px);
+}
+
+/* CTA */
+.commonpage-cta-section {
+  background: linear-gradient(to right, #ffe9e3, #e3f0ff);
+  border-radius: 10px;
+}
+
+.commonpage-cta-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.commonpage-cta-description {
+  color: #444;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.commonpage-cta-btn {
+  background: #0066ff;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.commonpage-cta-btn:hover {
+  background: #0050cc;
+  transform: translateY(-2px);
+}
+
+/* Contact Section */
+.commonpage-contact-section {
+  background-color: #262626;
+  color: #fff;
+}
+
+.commonpage-contact-description {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.commonpage-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.commonpage-icon {
+  color: #00ccff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.commonpage-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .commonpage-nav-right {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .commonpage-book-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .commonpage-book-card {
+    width: 90%;
+  }
+
+  .commonpage-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .commonpage-navbar .commonpage-logo {
+    margin-bottom: 0.5rem;
+  }
+}

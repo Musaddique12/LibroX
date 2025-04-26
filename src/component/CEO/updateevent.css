@@ -1,0 +1,106 @@
+/* General container for the UpdateEvent component */
+.update-event-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f7fb;
+    padding: 20px;
+}
+
+/* Card where the update form resides */
+.update-event-card {
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Heading for the component */
+.update-event-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d3d49;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form wrapper */
+.update-event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input and textarea groups */
+.update-event-input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label for form fields */
+.update-event-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+/* Input field styles */
+.update-event-input,
+.update-event-textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.update-event-input:focus,
+.update-event-textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Textarea specific styling */
+.update-event-textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Button styling */
+.update-event-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.update-event-button:hover {
+    background-color: #0056b3;
+}
+
+/* Loading text style */
+.update-event-loading {
+    font-size: 16px;
+    color: #007bff;
+    text-align: center;
+}
+
+.update-event-input ,.update-event-textarea{
+    width: 93%;
+    padding: 12px;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background: #f1f3f5;
+    color: #2c3e50;
+
+}

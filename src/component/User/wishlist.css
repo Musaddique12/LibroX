@@ -1,0 +1,381 @@
+/* General Wishlist container styles */
+#wishlist-container {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f3f4f6, #d9d9d9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+   padding: 10px;
+
+  }
+  
+  /* Header for Wishlist */
+  #wishlist-container h1 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Styling for Book Cards */
+  #book-card-1,
+  #book-card-2,
+  #book-card-3 {
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+    background: url('https://www.transparenttextures.com/patterns/geometry.png');
+
+  }
+  
+  #book-card-1:hover,
+  #book-card-2:hover,
+  #book-card-3:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Styling for Book Image */
+  #book-image-1,
+  #book-image-2,
+  #book-image-3 {
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+    width: 300px;
+  }
+
+  
+  
+  /* Book Details Section */
+  #book-details-1,
+  #book-details-2,
+  #book-details-3 {
+    flex-grow: 1;
+    padding-right: 20px;
+  }
+  
+  #book-details-1 p,
+  #book-details-2 p,
+  #book-details-3 p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  #book-name-1,
+  #book-name-2,
+  #book-name-3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #book-author-1,
+  #book-author-2,
+  #book-author-3 {
+    font-size: 16px;
+    color: #7f8c8d;
+  }
+  
+  #book-category-1,
+  #book-category-2,
+  #book-category-3 {
+    font-size: 14px;
+    color: #95a5a6;
+  }
+  
+  #user-id-1,
+  #user-id-2,
+  #user-id-3 {
+    font-size: 12px;
+    color: #bdc3c7;
+    font-style: italic;
+  }
+  
+  /* Book Actions Section */
+  #book-actions-1,
+  #book-actions-2,
+  #book-actions-3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #book-actions-1 button,
+  #book-actions-2 button,
+  #book-actions-3 button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  #book-actions-1 button:hover,
+  #book-actions-2 button:hover,
+  #book-actions-3 button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Icon styles for Like and Purchase buttons */
+  #book-actions-1 button svg,
+  #book-actions-2 button svg,
+  #book-actions-3 button svg {
+    font-size: 18px;
+  }
+  
+  /* Styling for No Books Found Message */
+  #no-books-message {
+    text-align: center;
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: 600;
+  }
+  
+  /* ToastContainer styling for smooth display */
+  .Toastify__toast-container {
+    z-index: 9999 !important;
+  }
+  
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    #book-card-1,
+    #book-card-2,
+    #book-card-3 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #book-details-1,
+    #book-details-2,
+    #book-details-3 {
+      padding-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    #book-actions-1,
+    #book-actions-2,
+    #book-actions-3 {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    #book-actions-1 button,
+    #book-actions-2 button,
+    #book-actions-3 button {
+      width: 48%;
+    }
+  
+    #book-image-1,
+    #book-image-2,
+    #book-image-3 {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+
+
+  .show-book-btn {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  /* Hover effect */
+  .show-book-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  }
+  
+
+  /* Pulse animation */
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.15); opacity: 0.4; }
+    100% { transform: scale(1.25); opacity: 0; }
+  }
+  
+  /* Glowing effect */
+  .show-book-btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .show-book-btn:hover::after {
+    opacity: 1;
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* 🟢 Responsive Fixes */
+  @media (max-width: 768px) {
+    .show-book-btn {
+      font-size: 14px;  /* Smaller font */
+      padding: 10px 20px;  /* Adjusted padding */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .show-book-btn {
+      font-size: 13px;  /* More compact text */
+      padding: 8px 16px;  /* Smaller padding */
+      width: 100%; /* Makes it full-width on very small screens */
+    }
+  }
+  
+
+
+
+
+  .book-card {
+    position: relative;
+    /* Add your book card styles here */
+  }
+  
+  .locked {
+    opacity: 0.5; /* Makes the book card look faded */
+    pointer-events: none; /* Prevents interactions */
+  }
+  
+  .lock-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Makes sure the overlay is above the content */
+    transform: rotate(-45deg); /* Creates the diagonal strike effect */
+    pointer-events: none; /* Prevents overlay from blocking interaction with other elements */
+  }
+  
+  .lock-icon {
+    font-size: 3rem;
+    color: white;
+  }
+  
+
+   
+
+
+  .revenue-btn,
+.delete-btn {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #4caf50; /* Green color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.revenue-btn:hover,
+.delete-btn:hover {
+  background-color: #45a049;
+}
+
+
+
+
+
+
+
+
+.book-card {
+  position: relative;
+  /* Add your book card styles here */
+}
+
+.locked {
+  opacity: 0.5; /* Makes the book card look faded */
+  pointer-events: none; /* Prevents interactions */
+}
+
+.lock-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Makes sure the overlay is above the content */
+  transform: rotate(-45deg); /* Creates the diagonal strike effect */
+  pointer-events: none; /* Prevents overlay from blocking interaction with other elements */
+}
+
+.lock-icon {
+  font-size: 3rem;
+  color: white;
+}
+
+
+ 
+
+
+.revenue-btn,
+.delete-btn {
+margin-top: 10px;
+margin-right: 10px;
+padding: 10px;
+font-size: 1rem;
+background-color: #4caf50; /* Green color */
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+pointer-events: all;
+}
+
+.revenue-btn:hover,
+.delete-btn:hover {
+background-color: #45a049;
+}
+
+
+
+
+

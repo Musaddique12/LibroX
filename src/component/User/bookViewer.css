@@ -1,0 +1,111 @@
+/* 🌟 Pro-Level Glassmorphism & Neumorphism Book Viewer */
+.book-viewer-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    backdrop-filter: blur(15px);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 30px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .dark-mode {
+    background: rgba(18, 18, 18, 0.8);
+    color: #fff;
+    backdrop-filter: blur(20px);
+  }
+  
+  .book-viewer-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dark-mode .book-viewer-title {
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* 📖 PDF Viewer */
+  .book-viewer-iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    border-radius: 12px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* .book-viewer-iframe:hover {
+    transform: scale(1.01);
+  } */
+  
+  /* 🎮 Controls */
+  .book-viewer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  .book-viewer-btn {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #fff;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  .book-viewer-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 154, 158, 0.3);
+  }
+  
+  /* 📥 Download Button */
+  .book-viewer-download-btn {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    color: white;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .book-viewer-download-btn:hover {
+    background: linear-gradient(135deg, #1d8ba1, #3c5ba3);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(54, 209, 220, 0.3);
+  }
+  
+  /* 📱 Responsive Design */
+  @media (max-width: 768px) {
+    .book-viewer-container {
+      padding: 15px;
+    }
+  
+    .book-viewer-controls {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  
+    .book-viewer-btn {
+      padding: 10px 14px;
+      font-size: 14px;
+    }
+  }
+  

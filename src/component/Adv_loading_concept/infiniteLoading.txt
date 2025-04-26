@@ -1,0 +1,78 @@
+import React, { useState, useEffect } from "react";
+import { db } from "../firebase"; // Your Firestore config
+import { collection, query, orderBy, limit, startAfter, getDocs } from "firebase/firestore";
+
+const HomePage = () => {
+  const [books, setBooks] = useState([]); // Store books
+  const [lastDoc, setLastDoc] = useState(null); // Store last document for pagination
+  const [loading, setLoading] = useState(false); // Show loading indicator
+  const [hasMore, setHasMore] = useState(true); // Check if more books exist
+
+  // Function to fetch books from Firestore
+  const fetchBooks = async () => {
+    if (loading || !hasMore) return;
+    setLoading(true);
+
+    try {
+      let booksRef = collection(db, "books"); // Firestore collection
+      let booksQuery = query(booksRef, orderBy("title"), limit(20));
+
+      if (lastDoc) {
+        booksQuery = query(booksRef, orderBy("title"), startAfter(lastDoc), limit(20));
+      }
+
+      const querySnapshot = await getDocs(booksQuery);
+      const newBooks = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+
+      setBooks((prevBooks) => [...prevBooks, ...newBooks]);
+
+      if (querySnapshot.docs.length < 20) {
+        setHasMore(false); // No more books left to fetch
+      } else {
+        setLastDoc(querySnapshot.docs[querySnapshot.docs.length - 1]); // Save last document
+      }
+    } catch (error) {
+      console.error("Error fetching books:", error);
+    }
+
+    setLoading(false);
+  };
+
+  // Fetch initial books
+  useEffect(() => {
+    fetchBooks();
+  }, []);
+
+  // Infinite Scroll: Detect when user reaches bottom
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+        fetchBooks();
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [books]);
+
+  return (
+    <div>
+      <h1>📚 Discover Books</h1>
+
+      {/* Books Grid */}
+      <div className="book-list">
+        {books.map((book) => (
+          <div key={book.id} className="book-card">
+            <img src={book.image} alt={book.title} />
+            <h3>{book.title}</h3>
+          </div>
+        ))}
+      </div>
+
+      {/* Loading Indicator */}
+      {loading && <p>Loading more books...</p>}
+    </div>
+  );
+};
+
+export default HomePage;

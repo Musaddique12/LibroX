@@ -1,0 +1,116 @@
+/* Main container */
+.updatebook-container {
+    max-width: 550px;
+    margin: 50px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #f4f4f9, #ffffff);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Title */
+.updatebook-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form Styling */
+.updatebook-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels */
+.updatebook-label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #34495e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Input & Textarea */
+.updatebook-input,
+.updatebook-textarea {
+    padding: 12px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+.updatebook-input:focus,
+.updatebook-textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Button */
+.updatebook-button {
+    background: #2980b9;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.updatebook-button:hover {
+    background: #1c598a;
+    transform: translateY(-2px);
+}
+
+/* Loading State */
+.updatebook-loading {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #7f8c8d;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .updatebook-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .updatebook-title {
+        font-size: 22px;
+    }
+
+    .updatebook-input, .updatebook-textarea {
+        font-size: 14px;
+    }
+
+    .updatebook-button {
+        font-size: 15px;
+    }
+}

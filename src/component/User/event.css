@@ -1,0 +1,212 @@
+/* General styles */
+.event {
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+/* Grid container */
+.event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    justify-items: center;
+}
+
+/* Event card */
+.event-card {
+    width: 100%;
+    max-width: 250px; /* Ensures cards don’t become too large */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background: white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image */
+.event-image {
+    width: 100%;
+    height: 200px;
+    max-height: 200px; /* Prevents oversized images */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Title */
+.event-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Price */
+.event-price {
+    font-size: 16px;
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+/* Stock */
+.event-stock {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Description */
+.event-description {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Buy Section */
+.event-buy-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Quantity Selector */
+.event-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.event-quantity-btn {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.event-quantity-btn:hover {
+    background-color: #1565c0;
+}
+
+.event-quantity-value {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Buy Button */
+.event-buy-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.event-buy-btn:hover {
+    background-color: #f57c00;
+}
+
+/* Notify Button */
+.event-notify-btn {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.event-notify-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .event-list {
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .event-list {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .event-card {
+        max-width: 200px;
+        padding: 10px;
+    }
+
+    .event-image {
+        max-height: 150px;
+    }
+
+    .event-title {
+        font-size: 16px;
+    }
+
+    .event-price,
+    .event-stock,
+    .event-description {
+        font-size: 12px;
+    }
+
+    .event-buy-btn,
+    .event-notify-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-list {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 10px;
+    }
+
+    .event-card {
+        max-width: 180px;
+        padding: 8px;
+    }
+
+    .event-image {
+        max-height: 120px;
+    }
+
+    .event-title {
+        font-size: 14px;
+    }
+
+    .event-price,
+    .event-stock,
+    .event-description {
+        font-size: 11px;
+    }
+
+    .event-buy-btn,
+    .event-notify-btn {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+}

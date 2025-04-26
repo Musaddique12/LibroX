@@ -1,0 +1,334 @@
+/* General styles for the ShowDetails page */
+.show-book-container {
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.show-book-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.show-book-image-container {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 20px;
+}
+.read-book-btn {
+    background-color: transparent;
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: 2px solid #007bff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.read-book-btn:hover {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.show-book-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.show-book-info {
+    flex: 2;
+}
+
+.show-book-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.show-book-meta {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.show-book-icon {
+    margin-right: 10px;
+}
+
+.show-book-author-info {
+    margin-bottom: 20px;
+}
+
+.author-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.channel-name {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+
+.show-book-desc {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Enhanced styling for the visit profile link */
+.view-profile-link {
+    width :82%;
+    font-size: 1.2rem;
+    color: #007BFF;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600; /* Slightly bold */
+    text-transform: capitalize; /* Make it look neater */
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background-color: transparent;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(1, 74, 152, 0.56); /* Soft shadow */
+    text-align: center;
+}
+
+.view-profile-link:hover {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    transform: translateY(-4px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
+     /* Enhanced shadow */
+}
+
+.view-profile-link:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.7); /* Focus glow */
+}
+
+.loading {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+
+/* Button Styles */
+.like-btn,
+.purchase-btn,
+.wishlist-btn {
+    background-color: #4A4A4A; /* Dark grey background */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Average size */
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600; /* Slightly bold */
+    box-shadow: 0 4px 8px rgba(2, 85, 173, 0.786); /* Soft shadow */
+
+}
+
+.like-btn:hover,
+.purchase-btn:hover,
+.wishlist-btn:hover {
+    background-color: #616161; /* Slightly lighter grey on hover */
+    transform: translateY(-4px); /* Subtle lift on hover */
+}
+
+.like-btn:focus,
+.purchase-btn:focus,
+.wishlist-btn:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); /* Soft focus effect */
+}
+
+/* Specific button colors for differentiation */
+.like-btn {
+    background-color: transparent;
+    color: #5466c9;
+    width: 47%;
+    margin-right: 6%; /* Muted Blue for Like */
+}
+
+.like-btn:hover {
+    background-color: #3F51B5;
+    color: #fff; /* Slightly darker blue on hover */
+}
+
+.purchase-btn {
+    background-color: transparent;
+    color: #81C784;
+    width: 100%;
+    margin-top: 20px; /* Muted Green for Purchase */
+}
+
+.purchase-btn:hover {
+    color: #fff;
+    background-color: #66BB6A;
+     /* Darker green on hover */
+}
+
+.wishlist-btn {
+    color: #FFEB3B;
+    background-color: transparent;
+    width: 47%;
+}
+
+.wishlist-btn:hover {
+    color: #fff;
+    background-color: #FBC02D; 
+    /* Darker yellow on hover */
+}
+
+@media (hover: none) {
+    .view-profile-link{
+        background-color: #007BFF;
+        color:white;
+        text-align: center;
+    }
+    .like-btn {
+        background-color: #3F51B5; /* Same as hover color */
+        color: #fff;
+    }
+    .purchase-btn {
+        background-color: #66BB6A; /* Same as hover color */
+        color: #fff;
+    }
+    .wishlist-btn {
+        background-color: #FBC02D; /* Same as hover color */
+        color: #fff;
+    }
+}
+
+
+
+/* Comment Section */
+
+
+.comment-title {
+    margin-top: 12x;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+/* Comment Form */
+.comment-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.comment-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.comment-btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.comment-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Comment List */
+.comment-list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* Individual Comment */
+.comment {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.comment-icon {
+    color: #007bff;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: gray;
+}
+
+.comment-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.no-comments {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.comment {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+.comment {
+    max-height: 200px; 
+    overflow-y: auto;
+  }
+    
+
+
+
+  @media (min-width: 320px) and (max-width: 650px) {
+   
+    .show-book-card{
+        align-items: center;
+        flex-direction: column;
+    }
+}

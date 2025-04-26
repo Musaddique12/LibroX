@@ -1,0 +1,196 @@
+/* Container for the entire form */
+.add-book-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for form labels */
+.add-book-form label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Style for form input fields */
+.add-book-form input,
+.add-book-form textarea,
+.add-book-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Focused input field styling */
+.add-book-form input:focus,
+.add-book-form textarea:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+/* Style for the textarea field */
+.add-book-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Style for submit button */
+.add-book-form button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.add-book-form button:hover {
+  background-color: #218838;
+}
+
+/* Styling for form sections (space between inputs) */
+.add-book-form .space-y-4 {
+  margin-bottom: 20px;
+}
+
+/* Flex container for aligning the submit button */
+.add-book-form .flex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Optional: Add some spacing between the form elements */
+.add-book-form div {
+  margin-bottom: 15px;
+}
+
+
+
+
+
+/* Container for the entire Admin Book Info component */
+.admin-book-info {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title of the admin panel */
+.admin-book-info h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Table Styling */
+.admin-book-info table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-book-info th,
+.admin-book-info td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.admin-book-info th {
+  background-color: #007bff;
+  color: white;
+}
+
+.admin-book-info td {
+  background-color: #fff;
+}
+
+/* Hover effect for table rows */
+.admin-book-info tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Styling for the delete button */
+.admin-book-info button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.admin-book-info button:hover {
+  opacity: 0.7;
+}
+
+/* Styling for the delete icon */
+.admin-book-info button svg {
+  color: red;
+  font-size: 24px;
+}
+
+/* Styling for the book image */
+.admin-book-info td img {
+  max-width: 50px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Message when no books are found */
+.admin-book-info p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
+
+
+/* Container for the Admin Navigation */
+.admin-nav {
+  background-color: #007bff;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the links */
+.admin-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.admin-nav a:hover {
+  color: #ffcc00;
+}
+
+/* Active link styling */
+.admin-nav a:active {
+  color: #28a745;
+}
+
+/* Optional: Add some margin at the bottom of the nav if needed */
+.admin-nav {
+  margin-bottom: 20px;
+}

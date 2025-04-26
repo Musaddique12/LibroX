@@ -1,0 +1,148 @@
+/* Full-screen overlay with luxury gradient */
+.profile-ad-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Elegant ad card */
+.profile-ad-card {
+    background: linear-gradient(135deg, #1f1f1f, #262626);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 15px 40px rgba(255, 223, 142, 0.3);
+    width: 80%;
+    max-width: 550px;
+    text-align: center;
+    color: white;
+    position: relative;
+    animation: fadeInUp 1s ease-in-out;
+    border: 2px solid rgba(255, 223, 142, 0.3);
+}
+
+/* Elegant close button */
+.profile-ad-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    color: white;
+    font-size: 1.8rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.profile-ad-close-btn:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+}
+
+/* Luxury title styling */
+.profile-ad-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ffcc00, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Premium highlight text */
+.highlight {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* Stylish message */
+.profile-ad-message {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Premium call-to-action button */
+.profile-ad-btn {
+    background: #ffcc00;
+    color: #1f1f1f;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-ad-btn:hover {
+    background: #ffdd44;
+    transform: translateY(-2px);
+}
+
+/* Entrance animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Small floating close button */
+.small-close-btn {
+    font-size: 1.5rem;
+    padding: 8px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.small-close-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+/* Fake Star Rating */
+.profile-ad-rating {
+    font-size: 1.2rem;
+    color: #ffcc00;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.rating-score {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 5px;
+}
+
+/* User Count */
+.user-count {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    display: block;
+    margin-top: 5px;
+}
+

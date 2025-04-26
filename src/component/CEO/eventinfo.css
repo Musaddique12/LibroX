@@ -1,0 +1,265 @@
+/* General Page Styling */
+.EventInfo-container {
+  margin-top:50px ;
+  max-width: 1200px;
+  margin-top: 0px;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f4;
+  min-height: 100vh;
+  justify-items: center;
+}
+
+/* Header */
+.EventInfo-header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.EventInfo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+/* Event Card */
+.EventInfo-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.EventInfo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.EventInfo-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Event Info */
+.EventInfo-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.EventInfo-price,
+.EventInfo-available,
+.EventInfo-selled,
+.EventInfo-income {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Buttons */
+.EventInfo-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.EventInfo-updateBtn,
+.EventInfo-deleteBtn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.EventInfo-updateBtn {
+  background-color: #007bff;
+  color: white;
+}
+
+.EventInfo-deleteBtn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.EventInfo-updateBtn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.EventInfo-deleteBtn:hover {
+  background-color: #a71d2a;
+  transform: scale(1.05);
+}
+
+/* Responsive Styling */
+
+/* Large Desktops (1200px and above) */
+@media (min-width: 1200px) {
+  .EventInfo-list {
+      gap: 30px;
+  }
+}
+
+@media (min-width:510px) and (max-width: 672px){
+.EventInfo-container{
+margin-top: 10px;
+}
+}
+
+
+/* Medium Screens (1024px - 1200px) */
+@media (max-width: 1200px) {
+  .EventInfo-list {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* Small Tablets & Laptops (768px - 1024px) */
+@media (max-width: 1024px) {
+  .EventInfo-list {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .EventInfo-img {
+      height: 160px;
+  }
+
+  .EventInfo-updateBtn,
+  .EventInfo-deleteBtn {
+      padding: 8px 16px;
+  }
+}
+
+/* Mobile Devices (480px - 768px) */
+@media (max-width: 768px) {
+
+  .EventInfo-card {
+      padding: 15px;
+  }
+
+  .EventInfo-img {
+      height: 150px;
+  }
+
+  .EventInfo-buttons {
+      flex-direction: column;
+      gap: 5px;
+  }
+
+  .EventInfo-updateBtn,
+  .EventInfo-deleteBtn {
+      width: 100%;
+      padding: 8px;
+  }
+}
+
+/* Extra Small Devices (Below 480px) */
+@media (max-width: 480px) {
+  .EventInfo-header {
+      font-size: 20px;
+  }
+
+  .EventInfo-name {
+      font-size: 16px;
+  }
+
+  .EventInfo-price,
+  .EventInfo-available,
+  .EventInfo-selled,
+  .EventInfo-income {
+      font-size: 12px;
+  }
+
+  .EventInfo-img {
+      height: 130px;
+  }
+
+  .EventInfo-updateBtn,
+  .EventInfo-deleteBtn {
+      font-size: 12px;
+      padding: 6px;
+  }
+}
+
+
+.EventInfo-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.EventInfo-filterBtn {
+  padding: 6px 12px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.EventInfo-filterBtn:hover {
+  background-color: #ddd;
+}
+
+.EventInfo-filterBtn.active {
+  background-color: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+}
+
+
+.EventInfo-waiter {
+  font-size: 14px;
+  color: #e74c3c;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.EventInfo-waiterCount {
+  font-weight: bold;
+  color: #c0392b;
+}
+
+.EventInfo-alert {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e53935;
+  background-color: #ffeaea;
+  border: 1px solid #ff4d4d;
+  padding: 6px 10px;
+  border-radius: 5px;
+  animation: pulse 1.5s infinite;
+  display: inline-block;
+}
+
+.EventInfo-waiterIcon {
+  margin-left: 6px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 77, 77, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0); }
+}
+
