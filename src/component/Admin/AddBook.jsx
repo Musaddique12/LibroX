@@ -58,7 +58,7 @@ function AddBook() {
         setPrice('')
         setReleaseDate('')
         set_Book_Pdf('')
-      }
+      
       // Fetch user data to get the followers
 
       if (userSnap.length > 0) {
@@ -97,7 +97,7 @@ function AddBook() {
         }
       } else {
         console.log('User not found');
-      }
+      }}
     } catch (e) {
       toast.error(`Error: ${e.message || e}`);
       console.error('Error:', e);
