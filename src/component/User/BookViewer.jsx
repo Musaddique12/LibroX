@@ -24,13 +24,18 @@ const BookViewer = () => {
   const toggleFullScreen = () => {
     if (iframeRef.current.requestFullscreen) {
       iframeRef.current.requestFullscreen();
-    } else if (iframeRef.current.mozRequestFullScreen) {
-      iframeRef.current.mozRequestFullScreen();
-    } else if (iframeRef.current.webkitRequestFullscreen) {
-      iframeRef.current.webkitRequestFullscreen();
-    } else if (iframeRef.current.msRequestFullscreen) {
-      iframeRef.current.msRequestFullscreen();
-    }
+      console.log("Fullscreen mode activated BY RequestFullScreen.");
+    } 
+    // else if (iframeRef.current.mozRequestFullScreen) {
+    //   iframeRef.current.mozRequestFullScreen();
+    //   console.log("Fullscreen mode activated BY MozRequestFullScreen.");
+    // } else if (iframeRef.current.webkitRequestFullscreen) {
+    //   iframeRef.current.webkitRequestFullscreen();
+    //   console.log("Fullscreen mode activated BY WebkitRequestFullscreen.");
+    // } else if (iframeRef.current.msRequestFullscreen) {
+    //   iframeRef.current.msRequestFullscreen();
+    //   console.log("Fullscreen mode activated BY MsRequestFullScreen.");
+    // }
   };
 
   // 🌙 Toggle Dark Mode

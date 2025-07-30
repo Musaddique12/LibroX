@@ -123,7 +123,7 @@ function Notification() {
             >
               <div className="notification-content" onClick={() => markAsRead(notification.bid)}>
                 <p className="notification-message">{notification.message}</p>
-                <small className="notification-timestamp">  {notification.timestamp?.toDate().toLocaleString()}</small>
+                <small className="notification-timestamp">  {notification.timestamp?.toDate().toLocaleString()|| "jjjj"}</small>
               </div>
               <button className="notification-delete" onClick={() => deleteNotification(notification.bid)}>🗑</button>
             </div>
