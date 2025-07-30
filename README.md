@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# 📚 Librox – Online Book Rental & Selling Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
+![Firebase](https://img.shields.io/badge/Firebase-ffca28?style=for-the-badge&logo=firebase)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel)
 
-## Available Scripts
+🔗 **Live Demo:** [https://libro-x.vercel.app/](https://libro-x.vercel.app/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📖 About the Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Librox** is a multi-role online library system that allows users to rent, read, and buy books in PDF format. The platform includes three core roles:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **User (Reader)** – Can rent, read, interact with books and providers
+2. **Admin (Book Provider)** – Can upload books, manage earnings, promote their books
+3. **Owner (Site Admin)** – Manages the overall library, inventory, and book statuses
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔑 Core Features
 
-### `npm run build`
+### 👤 User Features
+- 🔐 Sign up / Login
+- 📖 Rent and read books (PDF)
+- ❤️ Like, save, and comment on books
+- 🔍 Search and filter books (e.g., by price)
+- 👥 Follow book providers
+- 📢 View ads when accessing book details
+- 🛒 Buy physical books (home delivery)
+- ⏳ Join waiting list for out-of-stock books
+- 🔔 Get notified when:
+  - New books are added
+  - Followed providers update books
+  - Books are restocked
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🧑‍💻 Admin Features (Book Provider)
+- 📤 Upload books (PDF) with price and stock
+- 💵 Set rental and purchase price
+- 📊 View stats: uploads, earnings, withdrawals
+- 🔍 Advanced search and filter for their books
+- 📣 Promote books/profile with paid ads
+- ✏️ Edit book details anytime
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### 👑 Owner Features (Site Admin)
+- 🧾 Add, update, or delete books in store
+- 📦 Track stock and waiting lists
+- ⚠️ Identify books low or out of stock
+- 🔥 See which books are in high demand
+- 💸 Manage advertisement payments
+- 🔔 Send global notifications
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Frontend      | Backend       | Hosting     | Features              |
+|---------------|---------------|-------------|------------------------|
+| React.js      | Firebase      | Vercel      | Notifications, PDF reader |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📁 Folder Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
